@@ -1,0 +1,235 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009-2012 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+% GENERAL NOTE:  There may be some notes specific to myself.  If you're only interested in my LaTeX source or it doesn't make sense, please disregard it.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black
+    %urlcolor=mygreylink     % can put red here to better visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.40}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubsubheading}[2]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+        \textit{#1} & \textit{#2} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\begin{document}
+
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+    \textbf{\href{}{\LARGE Kristian R. Kyvik}} & \href{mailto:kristianruizkyvik@gmail.com}{kristianruizkyvik@gmail.com}\\
+    {\footnotesize {+34 932120948 - Cami de Vallvidrera al Tibidabo 43, 08035 Barcelona}} & \href{http://www.linkedin.com/in/kristianruizkyvik}{linkedin.com/in/kristianruizkyvik} \\
+    \end{tabular*}
+\\
+\vspace{0.1in}}
+
+% CHANGE HEADER SOURCE HERE
+\mywebheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+    \begin{itemize}
+        \item
+            \ressubheading{\href{http://www.ntnu.edu/}{Norwegian University of Sciences and Technology}}{Trondheim, Norway}{\href{http://www.ntnu.edu/studies/mtiot}{Msc. Industrial Economics and Technology Management}; \href{}{GPA:4.06}}{Aug. 2012 -- Present}
+                { \footnotesize
+                \begin{itemize}
+                    \resitem{Specialized in Computer Science and Communications Technology}
+                    \resitem{\textbf{\href{}{ Voluntary Activities:}}}
+                        \begin{itemize}
+                            \resitem{ Member \& Buddy Program Coordinator at {\href{http://www.trondheim.esn.no/}{ESN (Erasmus Student Network)}}}
+                            \resitem{ Member \& Main Organiser at {\href{http://www.best.eu.org/index.jsp}{BEST (Board of European Student of Technology)}}}
+                            \resitem{ Workshop Contact and Performing Arts Functionary at {\href{http://www.isfit.org/tabs/about-isfit}{ISFiT (International Student Festival in Trondheim)}}}
+                        \end{itemize}
+                \end{itemize}
+                }
+        \item
+        \ressubheading{\href{http://www.kcl.ac.uk/index.aspx}{King's College London}}{London, United Kingdom}{\href{}{Exchange Year (during third year)}; \href{}}{Aug. 2014 -- Jun. 2015}
+            { \footnotesize
+            \begin{itemize}
+                \resitem{Key Courses: Artificial Intelligence, Multi-Agent Systems, Optimization Methods, Programming Applications}
+            \end{itemize}
+            }
+        \item
+        \ressubheading{\href{http://www.ntnu.edu/}{Ironhack}}{Barcelona, Spain}{\href{https://www.ironhack.com/en}{Intensive 8 week programming apprenticeship}; \href{}}{Jun. 2012 -- Aug. 2014}
+            { \footnotesize
+            \begin{itemize}
+                \resitem{Focused on TDD, pair-programming, self-teaching/troubleshooting}
+                \resitem{Learned Front-end \& Back-end development, HTML5, CSS3, JavaScript, Git, Ruby, Rails, MVC, agile methods}
+            \end{itemize}
+            }
+    \end{itemize} % End Education list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Experience}
+    \begin{itemize}
+        \item
+            \ressubheading{\href{http://www.toadlondon.com/}{TOAD London}}{London, United Kingdom}{Software Developer}{Nov. 2014 -- Aug. 2015}
+                { \footnotesize
+                \begin{itemize}
+                    \resitem{Created responsive front-end implementations for websites and mobile apps using Bootstrap and AngularJS}
+                    \resitem{Worked on back-end implementation of web-apps (NodeJS) as well as with a variety of CMS platforms}
+                    \resitem{Created email marketing campaigns and used web analytic tracking systems}
+                \end{itemize}
+                }
+        \item
+            \ressubheading{\href{http://www.ntnu.edu/studies/mtiot}{Norwegian University of Sciences and Technology}}{Trondheim, Norway}
+                {Learning Assistant/ Facilitator at Experts in Team (EiT)}{Jan. 2014 -- Jun. 2014}
+                { \footnotesize
+                \begin{itemize}
+                    \resitem{EiT is a course in which students apply their academic competence in interdisciplinary projects}
+                    \resitem{Observed and provided feedback on group interactions and planned activities to stimulate team dynamics}
+                \end{itemize}
+                }
+
+            \ressubsubheading{Teaching Assistant in Dicrete Mathematics}{Aug. 2013 -- Feb. 2013}
+                { \footnotesize
+                \begin{itemize}
+                    \resitem{Overlooked two weekly 2-hour tutorials in the subject TMA4140 Discrete Mathematics}
+                \end{itemize}
+                }
+
+        \item
+            \ressubheading{\href{http://www.moereguide.com/}{M{\o}re \& Trondelag Guideservice AS}}{Trondheim, Norway}{Tourist Guide}{Jun. 2013 -- Aug. 2013}
+                { \footnotesize
+                \begin{itemize}
+                    \resitem{Worked as a tourist guide for both Spanish and British groups (30-50 at a time)}
+                \end{itemize}
+                }
+
+    \end{itemize}  % End Experience list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+    \begin{description}
+        \item[Technologies:] { \footnotesize Ruby, Python, Java, Javascript, MySQL, HTML, CSS, Rails, Angular, Bootstrap, Git, Regex, JSON}
+
+        \item[Languages:] { \footnotesize
+            Spanish (Fluent), English (Fluent), Norwegian (Advanced), Catalan (Fluent), French (Intermidiate)
+        }
+
+    \end{description} % End Skills list
+
+\resheading{\href{http://www.derekhildreth.com/portfolio.php}{Projects}}
+
+\begin{description}
+\item[\href{https://www.no.capgemini-consulting.com/careers/management-consulting-workshop}{Attended Capgemini Management Consulting Workshop:}] { \footnotesize This four-day event held in Paris, provides a unique insight into what it means to work as a management consultant at Capgemini Consulting}
+
+\item[\href{https://vimeo.com/107409144}{HackShow Finalist:}] { \footnotesize Made it to the top 5 projects of the IronHack cohort and presented during the final ceremony}
+
+\item[Prize at Manchester MLH Hack:] { \footnotesize Created a mobile app that provided directions without internet connection}
+
+\item[\href{http://elworldtrip.com/}{elWorldtrip:}] { \footnotesize Project that involved traveling around the world with my family for an entire year. The six of us crossed more than 30 countries and 5 continents in our old Toyota Land Cruiser. It was a trip to explore the world, learn about foreign cultures and, last but not least, to spread consciousness about Diabetis.}
+
+\end{description}
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Would have completed this if I had not had all projects listed under "Skills".
+% Still a good idea.  See if I can fit it in somewhere...  Otherwise, just print it out and bring it to an interview if needed.
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Only Print References If Requested!  Maybe even put it in it's own page.  Must have same heading as first page.
+%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\myheader
+\resheading{References}
+    \begin{center}
+        \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}  l l l }
+            Toby Rummans & Eric Karl & Gordon Smith \\
+            Entry Level Web Developer & Computer Science \& Engineering  & Technology Support Specialist \\
+            \vspace{10pt}
+            Memolinkcorp & BYU-Idaho & BYU-Idaho \\
+            [removed] & 525 South Center St. & 525 South Center St.  \\
+            Denver, CO 80210 & Rexburg ID 83460 & Rexburg ID 83460 \\
+            [removed] & (208) 496-3097 & (208) 496-2816 \\
+        \end{tabular*}
+    \end{center}
+
+% \end{document}
+
+
+% ADDITIONAL WORK EXPERIENCE NOT INCLUDED   OR OLD
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% GENERAL RESUME NOTES %
+%%%%%%%%%%%%%%%%%%%%%%%%
+Need to brush up on the skills section?  Here are some really good ideas:
+
+- Communication: The ability to express and interpret ideas and convey knowledge.
+Skills like speaking effectively, writing concisely, listening attentively, expressing ideas,
+reporting information, editing, interviewing, and facilitating group discussion.
+
+- Research and Planning: The ability to search for specific knowledge and formulate a
+program for a definite course of action. Skills like forecasting, predicting, identifying
+issues, finding alternatives, gathering information, solving problems, setting goals,
+extracting information, and developing strategies.
+
+- Human Relations: The ability to apply interpersonal skills to resolve conflict, relate to
+people, and help people. Skills like providing support for others, listening, delegating
+with respect, representing others, asserting, developing rapport, and perceiving
+feelings.
+
+- Management, Organization, Leadership: The ability to supervise others and guide
+individuals and groups towards the completion of tasks. Skills like managing groups,
+selling ideas, making decisions, managing conflict, coordinating tasks, teaching,
+enlisting help.
+
+Source:
+http://www.squawkfox.com/2009/03/08/6-action-words-that-make-your-resume-rock/
+
+Other Resources:
+http://www.tvmier.com/Resume_Education.html
+
